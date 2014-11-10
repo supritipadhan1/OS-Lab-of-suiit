@@ -1,0 +1,21 @@
+cd Desktop
+
+sudo mv ns-allinone-2.35.tar.gz /opt
+
+cd /opt
+
+sudo tar -xvf ns-allinone-2.35.tar.gz
+
+cd ns-allinone-2.35/
+
+sudo apt­-get install build­-essential autoconf automake libxmu-­dev xorg­-dev g++ xgraph g++ g++-4.4 g++-4.6 g++-4.7 ns2 nam gnuplot
+
+sudo su
+
+export CC=gcc-4.6 CXX=g++-4.6 && ./install
+
+cd /usr/bin
+
+sudo mv nam nam.old
+
+sudo cp /opt/ns-allinone-2.35/nam-1.15/nam .
